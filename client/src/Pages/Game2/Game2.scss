@@ -1,0 +1,162 @@
+.BigManCon{
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    width:100vw;
+    justify-content: center;
+
+}
+
+.mancalaGrid {
+    display: grid;
+    align-items: center;
+    border: solid 4px white;
+    grid-gap: 10px;
+    padding: 25px;
+    margin: 150px;
+    grid-template-areas:
+      "store-a pit-1 pit-2 pit-3 pit-4 pit-5 pit-6 store-b"
+      "store-a pit-7 pit-8 pit-9 pit-10 pit-11 pit-12 store-b";
+
+
+    .mancala-store {
+
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:100px; height:224px;
+        
+        margin:5px;
+        border-radius:18px;
+        box-shadow: 6px 0 0 -2px rgb(255, 255, 255);
+        background-color:white;
+        border: solid black;
+        cursor:pointer;
+        p{
+            position:absolute;
+            top:50%;
+            width:100%;
+            transform:translate(0, -50%);
+            text-align:center;
+        }
+    
+        &:nth-child(7) {
+            grid-area: store-b;
+            
+        }
+
+        &:nth-child(14) {
+            grid-area: store-a;
+            
+        }
+        
+    }
+    
+    
+    .mancala-pit{
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:100px; height:100px;
+     
+        margin:5px;
+        border-radius:100%;
+        background-color:white;
+        box-shadow: 6px 0 0 -2px rgb(255, 255, 255);
+        border: solid black;
+        transition: 0.3s;
+    
+        cursor:pointer;
+        p{
+            position:absolute;
+            top:50%;
+            width:100%;
+            transform:translate(0, -50%);
+            text-align:center;
+        }
+
+        &:nth-child(1) {
+            grid-area: pit-1;
+            
+        }
+        
+        &:nth-child(2) {
+            grid-area: pit-2;
+        }
+        
+        &:nth-child(3) {
+            grid-area: pit-3;
+        }
+        
+        &:nth-child(4) {
+            grid-area: pit-4;
+        }
+        
+        &:nth-child(5) {
+            grid-area: pit-5;
+        }
+        
+        &:nth-child(6) {
+            grid-area: pit-6;
+        }
+        
+        &:nth-child(8) {
+            grid-area: pit-7;
+            
+            &:hover {
+                background-color:var(--primary);
+                box-shadow: 6px 0 0 -2px var(--primary);
+            }
+        }
+        
+        &:nth-child(9) {
+            grid-area: pit-8;
+            &:hover {
+                background-color:var(--primary);
+                box-shadow: 6px 0 0 -2px var(--primary);
+            }
+        }
+        
+        &:nth-child(10) {
+            grid-area: pit-9;
+            &:hover {
+                background-color:var(--primary);
+                box-shadow: 6px 0 0 -2px var(--primary);
+            }
+        }
+        
+        &:nth-child(11) {
+            grid-area: pit-10;
+            &:hover {
+                background-color:var(--primary);
+                box-shadow: 6px 0 0 -2px var(--primary);
+            }
+        }
+        
+        &:nth-child(12) {
+            grid-area: pit-11;
+            &:hover {
+                background-color:var(--primary);
+                box-shadow: 6px 0 0 -2px var(--primary);
+            }
+            
+        }
+        
+        &:nth-child(13) {
+            grid-area: pit-12;
+            &:hover {
+                background-color:var(--primary);
+                box-shadow: 6px 0 0 -2px var(--primary);
+            }
+        }
+        
+        
+    }
+
+
+
+  }
+
+

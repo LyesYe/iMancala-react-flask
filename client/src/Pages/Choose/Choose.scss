@@ -1,0 +1,32 @@
+#conChoose{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    //take full width
+    //---------------------------------------------------------------------
+    // position:relative;
+    // top:0px;
+    // right:0px;
+    // bottom:0px;
+    // left:0px;
+    //---------------------------------------------------------------------
+
+    #title{
+        height: 30%;
+        font-size: 4rem;
+        font-weight: 600;
+        color: var(--tertiary);
+        margin-top: 2rem;
+    }
+
+    #choices{
+        height: 70%;
+        width: 65%;
+        display: flex;
+        flex-direction: row;
+        justify-content:  space-between;
+        
+    }
+}

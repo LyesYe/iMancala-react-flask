@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://127.0.0.1:5000/", 
+  "proxy" : "http://127.0.0.1:5000/",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -20,7 +20,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "cross-env DANGEROUSLY_DISABLE_HOST_CHECK=true react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "start-backend": "cd ../server && env/bin/flask run --no-debugger",
@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "@7urtle/lambda": "^1.4.1",
+    "cross-env": "^7.0.3",
     "react-router-dom": "^6.4.5"
   }
 }

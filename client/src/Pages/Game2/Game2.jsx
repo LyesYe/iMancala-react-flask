@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './Game2.scss'
 import axios from "axios"
+import { useLocation } from 'react-router-dom';
+
 function Game2() {
 
   // const [store1, setStore1] = useState(0);
@@ -9,12 +11,25 @@ function Game2() {
   const [turn, setTurn] = useState(1);
   const [move, setMove] = useState('');
   const [steps, setSteps] = useState(0);
+  // const [settings, setSettings] = useState();
 
   const [gameOver, setGameOver] = useState(false);
 
   const [winner, setWinner] = useState(0);
   
+  const location = useLocation();
+  //the data here will be an object since an object was
+  const data = location.state;
+  console.log(data);
 
+
+  const [settings, setSettings] = useState({
+    ANN : false,
+    MCTS : false,
+    DEPTH : 0,
+    heuristic : 0, 
+    MINMAX : false
+  });
 
   const [game, setGame] = useState({
     G: 4,
@@ -175,12 +190,17 @@ function Game2() {
 
   const getData = (e,key) => {
 
-    if (game[key] != 0) {
+    
+    
+    setSettings(data);
+
+    if (game[key] != 0 && turn == 1) {
 
       console.log("i sent this state : ")
     console.log(game)
     console.log(key)
     console.log(turn)
+    console.log(settings)
     console.log('-----------------------------------------------------')
 
     axios({
@@ -190,6 +210,7 @@ function Game2() {
         game: game,
         turn: turn,
         move: key,
+        setting: data ,
       },
       // data: JSON.stringify({
       //   game: game,
@@ -311,9 +332,10 @@ function Game2() {
 
 
 
+
   return (
 
-    <div className="BigManCon">
+    <div id="BigManCon">
 
       <div className="headcon">
 
@@ -324,9 +346,15 @@ function Game2() {
       <div className="turnu">
       <h1>Move " {move} " with {steps} steps</h1>
       </div>
-      <div className="turnu">
-      <h1>winner : {winner == 1 ? "You Won" : "AI Won"}</h1>
-      </div>
+      
+      {
+        <div className="turnu">
+          <h1>{winner == 0 ? "Game Playing..." : winner == 1 ? "You Won" : "AI Won"}</h1>
+        </div>
+
+
+      }
+      
       </div>
 
       
@@ -339,10 +367,16 @@ function Game2() {
 
           {Object.keys(game).map((pit,index) => (
 
-            (pit === "M1" || pit === "M2") ?
+
+            (pit === "M1")  ?
               <div className="mancala-store" id={`${pit}`} key={pit} >{pit} : {game[pit]}</div>
             :
-              <div className="mancala-pit" id={`pit-${pit}`} key={pit} onClick={event => getData(event, pit)} >{pit} : {game[pit]}</div>
+            (pit === "M2")  ?
+              <div className="mancala-store" id={`${pit}`} key={pit} >{pit} : {game[pit]}</div>
+            :
+              <div className="mancala-pit" id={`pit-${pit}`} key={pit}   onClick= {pit === "A" || pit === "B" || pit === "C" || pit === "D" || pit === "E" || pit === "F" ? (e) => getData(e,pit) : console.log("HAHA")} >
+                {pit} : {game[pit]}
+                </div>
             
 
           ))}

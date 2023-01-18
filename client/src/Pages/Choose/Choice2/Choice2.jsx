@@ -1,8 +1,23 @@
 import React from 'react'
 import './Choice2.scss'
+import { useNavigate } from "react-router-dom";
+
+
+
 function Choice2(props) {
+
+  const navigate = useNavigate();
+    
+  function handleClick() {
+    navigate(props.link);
+  }
+
+
+
+
   return (
-    <a id="linkury" href="/game"> 
+    
+    <div id="linkury"  onClick={handleClick} > 
       
       
         <div id="cardo">
@@ -18,7 +33,7 @@ function Choice2(props) {
           </div>
         </div>
       
-    </a>
+    </div>
   )
 }
 

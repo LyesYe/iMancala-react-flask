@@ -10,13 +10,13 @@ class Play:
         current_player = Game.do_move(move, current_player)
         return current_player, Game
 
-    def computer_turn(self, Game: State, Noeud: Node, current_player, **Setting):
+    def computer_turn(self, Game: State, Noeud: Node, current_player, Setting):
         
         
         
         
         if len(Game.possible_moves(current_player)) > 0:
-            if MINMAX:
+            if Setting["MINMAX"]:
                 best_node, STEP = Search.MiniMaxAlphaBeta(
                     Noeud, Setting["DEPTH"], current_player, Noeud.alpha, Noeud.beta, Setting["ANN"], Setting["MCTS"]  , Setting["heuristic"])
 

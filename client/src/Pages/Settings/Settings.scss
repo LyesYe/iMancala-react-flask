@@ -1,0 +1,86 @@
+#conSet{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    //take full width
+    //---------------------------------------------------------------------
+    // position:relative;
+    // top:0px;
+    // right:0px;
+    // bottom:0px;
+    // left:0px;
+    //---------------------------------------------------------------------
+
+    #titleSet{
+        height: 15%;
+        font-size: 4rem;
+        font-weight: 600;
+        color: var(--tertiary);
+        margin-top: 2rem;
+    }
+
+    #Settings{
+
+        
+        height: 70%;
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        justify-content:  space-around;
+        // align-items: center;
+        border: solid 5px white;
+        border-radius: 18px;
+        
+
+        #Settings1{
+            display: flex;
+        flex-direction: row;
+        justify-content:  center;
+        align-items: center;
+        // border: solid 1px white;
+        
+
+        h1{
+            padding-left: 1.2rem;
+        padding-right: 1.2rem;
+        
+        // color: black;
+        }
+
+        color: white;
+        font-size: 0.7rem;
+        }
+
+        .selecto{
+            background-color: rgb(255, 255, 255);
+            border-radius: 5PX;
+        }
+
+
+
+
+        #start{
+            display: flex;
+        flex-direction: row;
+
+        justify-content:  center;
+        // align-items: center;
+        color: white;
+             border-top: solid 5px white;
+             cursor:pointer;
+             
+        }
+        
+    }
+
+    // #choices{
+    //     height: 70%;
+    //     width: 65%;
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content:  space-between;
+        
+    // }
+}

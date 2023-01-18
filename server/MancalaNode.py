@@ -98,7 +98,10 @@ class Node:
         return FMKS
 
     def herusitic_3(self):
-        pass
+        moves_1 = len(self.state.possible_moves(1))
+        moves_2 = len(self.state.possible_moves(-1))
+
+        return moves_1-moves_2
 
     def heuristic_2(self):
         max_store = self.state.board_game["M1"]

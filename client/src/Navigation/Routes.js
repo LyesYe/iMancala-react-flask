@@ -10,8 +10,9 @@ import Game2 from '../Pages/Game2/Game2.jsx';
  */
 const Routess = () => (
     <Routes>
-        <Route  path='/' element={Home} />
-        <Route  path='/game' element={Game2} />
+        <Route  path='/' element={<Home/>} />
+        <Route  path='/game' element={<Game2/>} />
+        {/* <Route  path='/game' element={Game2} /> */}
 
         {/* The router goes through all the routes sequentially from the top and uses the first match it finds. That means your 404 needs to come after all other routes and redirects. */}
 

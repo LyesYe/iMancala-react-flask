@@ -1,4 +1,4 @@
-.BigManCon{
+#BigManCon{
     display: flex;
     flex-direction: column;
     height:100vh;
@@ -40,172 +40,187 @@
         }
     }
 
+    .mancalaGrid {
+        display: grid;
+        align-items: center;
+        border: solid 4px white;
+        grid-gap: 10px;
+        padding: 25px;
+        margin: 15px;
+        // height:70%;
+        border-radius: 18px;
+        grid-template-areas:
+          "store-b pit-1 pit-2 pit-3 pit-4 pit-5 pit-6 store-a"
+          "store-b pit-7 pit-8 pit-9 pit-10 pit-11 pit-12 store-a";
+        // grid-template-areas:
+        //    "store pit pit pit pit pit pit "
+        //    "store pit pit pit pit pit pit ";
+    
+
+        #pit-G {
+            grid-area: pit-1;
+            
+        }
+        
+        #pit-H {
+            grid-area: pit-2;
+        }
+        
+        #pit-I {
+            grid-area: pit-3;
+        }
+        
+        #pit-J {
+            grid-area: pit-4;
+        }
+        
+        #pit-K {
+            grid-area: pit-5;
+        }
+        
+        #pit-L {
+            grid-area: pit-6;
+        }
+        
+        #pit-A {
+            cursor:pointer;
+            grid-area: pit-7;
+            
+            &:hover {
+                background-color:var(--primary);
+                box-shadow: 6px 0 0 -2px var(--primary);
+            }
+        }
+        
+        #pit-B {
+            cursor:pointer;
+            grid-area: pit-8;
+            &:hover {
+                background-color:var(--primary);
+                box-shadow: 6px 0 0 -2px var(--primary);
+            }
+        }
+        
+        #pit-C {
+            cursor:pointer;
+            grid-area: pit-9;
+            &:hover {
+                background-color:var(--primary);
+                box-shadow: 6px 0 0 -2px var(--primary);
+            }
+        }
+        
+        #pit-D {
+            cursor:pointer;
+            grid-area: pit-10;
+            &:hover {
+                background-color:var(--primary);
+                box-shadow: 6px 0 0 -2px var(--primary);
+            }
+        }
+        
+        #pit-E {
+            cursor:pointer;
+            grid-area: pit-11;
+            &:hover {
+                background-color:var(--primary);
+                box-shadow: 6px 0 0 -2px var(--primary);
+            }
+            
+        }
+        
+        #pit-F {
+            cursor:pointer;
+            grid-area: pit-12;
+            &:hover {
+                background-color:var(--primary);
+                box-shadow: 6px 0 0 -2px var(--primary);
+            }
+        }
+        
+        #M2 {
+            grid-area: store-b;
+            
+        }
+        
+        #M1{
+            grid-area: store-a;
+            
+        }
+
+
+
+    
+        .mancala-store {
+    
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:100px; height:224px;
+            
+            margin:5px;
+            border-radius:18px;
+            box-shadow: 6px 0 0 -2px rgb(255, 255, 255);
+            background-color:white;
+            border: solid black;
+            
+            p{
+                position:absolute;
+                top:50%;
+                width:100%;
+                transform:translate(0, -50%);
+                text-align:center;
+            }
+    
+            grid-area: store;
+        
+            
+            
+        }
+        
+        
+        .mancala-pit{
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:100px; height:100px;
+         
+            margin:5px;
+            border-radius:100%;
+            background-color:white;
+            box-shadow: 6px 0 0 -2px rgb(255, 255, 255);
+            border: solid black;
+            transition: 0.3s;
+            
+            grid-area: pit;
+    
+            
+            p{
+                position:absolute;
+                top:50%;
+                width:100%;
+                transform:translate(0, -50%);
+                text-align:center;
+            }
+    
+            
+            
+            
+        }
+    
+    
+    
+      }
+
    
+      .lunch{
+        background-color: white;
+        cursor: pointer;
+      }
 
 
 
-.mancalaGrid {
-    display: grid;
-    align-items: center;
-    border: solid 4px white;
-    grid-gap: 10px;
-    padding: 25px;
-    margin: 15px;
-    // height:70%;
-    border-radius: 18px;
-    grid-template-areas:
-      "store-b pit-1 pit-2 pit-3 pit-4 pit-5 pit-6 store-a"
-      "store-b pit-7 pit-8 pit-9 pit-10 pit-11 pit-12 store-a";
-    // grid-template-areas:
-    //    "store pit pit pit pit pit pit "
-    //    "store pit pit pit pit pit pit ";
-
-
-    .mancala-store {
-
-        background-color: rgb(255, 255, 255);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width:100px; height:224px;
-        
-        margin:5px;
-        border-radius:18px;
-        box-shadow: 6px 0 0 -2px rgb(255, 255, 255);
-        background-color:white;
-        border: solid black;
-        cursor:pointer;
-        p{
-            position:absolute;
-            top:50%;
-            width:100%;
-            transform:translate(0, -50%);
-            text-align:center;
-        }
-
-        grid-area: store;
-    
-        
-        
-    }
-    
-    
-    .mancala-pit{
-        background-color: rgb(255, 255, 255);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width:100px; height:100px;
-     
-        margin:5px;
-        border-radius:100%;
-        background-color:white;
-        box-shadow: 6px 0 0 -2px rgb(255, 255, 255);
-        border: solid black;
-        transition: 0.3s;
-        
-        grid-area: pit;
-
-        cursor:pointer;
-        p{
-            position:absolute;
-            top:50%;
-            width:100%;
-            transform:translate(0, -50%);
-            text-align:center;
-        }
-
-        
-        
-        
-    }
-
-
-
-  }
 }
 
-#pit-G {
-    grid-area: pit-1;
-    
-}
-
-#pit-H {
-    grid-area: pit-2;
-}
-
-#pit-I {
-    grid-area: pit-3;
-}
-
-#pit-J {
-    grid-area: pit-4;
-}
-
-#pit-K {
-    grid-area: pit-5;
-}
-
-#pit-L {
-    grid-area: pit-6;
-}
-
-#pit-A {
-    grid-area: pit-7;
-    
-    &:hover {
-        background-color:var(--primary);
-        box-shadow: 6px 0 0 -2px var(--primary);
-    }
-}
-
-#pit-B {
-    grid-area: pit-8;
-    &:hover {
-        background-color:var(--primary);
-        box-shadow: 6px 0 0 -2px var(--primary);
-    }
-}
-
-#pit-C {
-    grid-area: pit-9;
-    &:hover {
-        background-color:var(--primary);
-        box-shadow: 6px 0 0 -2px var(--primary);
-    }
-}
-
-#pit-D {
-    grid-area: pit-10;
-    &:hover {
-        background-color:var(--primary);
-        box-shadow: 6px 0 0 -2px var(--primary);
-    }
-}
-
-#pit-E {
-    grid-area: pit-11;
-    &:hover {
-        background-color:var(--primary);
-        box-shadow: 6px 0 0 -2px var(--primary);
-    }
-    
-}
-
-#pit-F {
-    grid-area: pit-12;
-    &:hover {
-        background-color:var(--primary);
-        box-shadow: 6px 0 0 -2px var(--primary);
-    }
-}
-
-#M2 {
-    grid-area: store-b;
-    
-}
-
-#M1{
-    grid-area: store-a;
-    
-}

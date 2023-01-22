@@ -1,0 +1,101 @@
+#conSet{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    //take full width
+    //---------------------------------------------------------------------
+    // position:relative;
+    // top:0px;
+    // right:0px;
+    // bottom:0px;
+    // left:0px;
+    //---------------------------------------------------------------------
+
+    #titleSet{
+        height: 15%;
+        font-size: 4rem;
+        font-weight: 600;
+        color: var(--tertiary);
+        margin-top: 2rem;
+    }
+
+
+    .gridSet{
+        display: flex;
+        width:100vw;
+        height: 70%;
+        margin-top: 1rem;
+        
+        // justify-content: space-between;
+        // align-items: flex-end;
+
+        #Settings{
+
+            padding: 3.5rem;
+            height: 70%;
+            width: 65%;
+            display: flex;
+            flex-direction: column;
+            justify-content:  space-around;
+            // align-items: center;
+            border: solid 5px white;
+            border-radius: 18px;
+            
+    
+            #Settings1{
+            display: flex;
+            flex-direction: row;
+            justify-content:  center;
+            align-items: center;
+            // border: solid 1px white;
+            height: 8rem;
+            
+    
+            h1{
+                padding-left: 1.2rem;
+            padding-right: 1.2rem;
+            
+            // color: black;
+            }
+    
+            color: white;
+            font-size: 0.7rem;
+            }
+    
+            .selecto{
+                background-color: rgb(255, 255, 255);
+                border-radius: 5PX;
+            }
+    
+            
+        }
+
+
+        
+
+    }
+
+    #start{
+        display: flex;
+        flex-direction: row;
+
+        justify-content:  center;
+        // align-items: center;
+        color: white;
+        border: solid 5px white;
+        border-radius: 18px;
+        cursor:pointer;
+        padding-left: 1rem;
+        padding-right   : 1rem;
+         
+    }
+
+    #start:hover{
+        background-color: rgb(255, 255, 255);
+        color: black;
+    }
+
+
+}

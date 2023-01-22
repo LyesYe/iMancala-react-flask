@@ -15,8 +15,8 @@ from tensorflow.keras.models import Model
 FILE = "model_nn.h5"
 TRAIN = True
 CREATE = False
-EPOCHS = 1000
-BATCH_SIZE = 256
+EPOCHS = 10
+BATCH_SIZE = 512
 GENERATED_GAME = 150000
 
 
@@ -136,6 +136,21 @@ def create_dataset(games_evals):
     return np.array(games_dataset), labels_dataset
 
 
+def mancala_model_three(conv_size, conv_depth):
+    board = layers.Input(shape=(2, 7, 1))
+
+    x = board
+    for _ in range(conv_depth):
+        x = layers.Conv2D(filters=conv_size, kernel_size=3,
+                          padding='same')(x)
+
+    x = layers.Flatten(name="flatten")(x)
+    x = layers.Dense(64, name="pre_last_dense", activation="relu")(x)
+    x = layers.Dense(1, 'sigmoid')(x)
+
+    return Model(inputs=board, outputs=x)
+
+
 def mancala_model_two():
 
     board = layers.Input(shape=(2, 7, 1))
@@ -192,11 +207,11 @@ else:
 
 x_train = np.array([arr.reshape(2, 7) for arr in x_train])
 x_train = normalize(x_train, type=3, type_on=1)
-# y_train = normalize(y_train, type=2)
+y_train = normalize(y_train, type=1)
 
 if TRAIN:
     # model = mancala_model(32, 4)
-    model = mancala_model_two()
+    model = mancala_model_three(32, 4)
     model.compile(optimizer=Adam(1e-3),
                   loss='mean_squared_error', metrics=['accuracy'])
     model.summary()

@@ -1,19 +1,22 @@
+import time
 from MancalaNode import Node
 
 MAX = 1
 STEP = 0
+TIME_MAX = 10
 
 
 class Search:
 
     @staticmethod
-    def MiniMaxAlphaBeta(noeud: Node, depth, player, alpha, beta, ANN=False, MCTS=False, heuristic=1) -> tuple:
+    def MiniMaxAlphaBeta(noeud: Node, depth, player, alpha, beta, ANN=False, MCTS=False, heuristic=1, max_time=0) -> tuple:
         global STEP
         STEP += 1
         noeud.alpha = alpha
         noeud.beta = beta
 
-        if depth == 1 or noeud.state.game_over():
+        # if depth == 1 or noeud.state.game_over():
+        if depth == 1 or noeud.state.game_over() or time.time()-max_time > TIME_MAX:
             value = noeud.evaluate(
                 neural_network=ANN, monte_carlo=MCTS, heuristic=heuristic)
             noeud.value = value
@@ -29,7 +32,7 @@ class Search:
 
                 for child in succ_childs:
                     Search.MiniMaxAlphaBeta(
-                        child, depth-1, child.player_side, alpha, beta, ANN, MCTS, heuristic)
+                        child, depth-1, child.player_side, alpha, beta, ANN, MCTS, heuristic, max_time)
                     if child.value > best_value:
                         best_value = child.value
                         best_node = child
@@ -45,7 +48,7 @@ class Search:
 
                 for child in succ_childs:
                     Search.MiniMaxAlphaBeta(
-                        child, depth-1, child.player_side, alpha, beta, ANN, MCTS, heuristic)
+                        child, depth-1, child.player_side, alpha, beta, ANN, MCTS, heuristic, max_time)
                     if child.value < best_value:
                         best_value = child.value
                         best_node = child
@@ -62,13 +65,13 @@ class Search:
             return noeud, STEP
 
     @ staticmethod
-    def NegaMaxAlphaBeta(noeud: Node, depth, player, alpha, beta, ANN=False, MCTS=False, heuristic=1) -> tuple:
+    def NegaMaxAlphaBeta(noeud: Node, depth, player, alpha, beta, ANN=False, MCTS=False, heuristic=1, max_time=0) -> tuple:
         global STEP
         STEP += 1
         noeud.alpha = alpha
         noeud.beta = beta
 
-        if depth == 1 or noeud.state.game_over():
+        if depth == 1 or noeud.state.game_over() or time.time()-max_time > TIME_MAX:
             value = noeud.evaluate(
                 neural_network=ANN, monte_carlo=MCTS, heuristic=heuristic)
             noeud.value = value
@@ -85,7 +88,7 @@ class Search:
 
             for child in succ_childs:
                 Search.NegaMaxAlphaBeta(
-                    child, depth-1, -player, -beta, -alpha, ANN, MCTS, heuristic)
+                    child, depth-1, -player, -beta, -alpha, ANN, MCTS, heuristic, max_time)
                 if -child.value > best_value:
                     best_value = -child.value
                     best_node = child

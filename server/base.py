@@ -10,9 +10,9 @@ from MancalaPlay import Play
 
 settings = {
     "ANN" : False,
-    "MCTS" : True,
+    "MCTS" : False,
     "DEPTH" : 6,
-    "heuristic" : 3, 
+    "heuristic" : 1, 
     "MINMAX" : True
 }
 settings2 = {
@@ -37,7 +37,7 @@ def my_profile():
     print(gameData["game"])
     print(gameData["turn"])
     print(gameData["move"])
-    # print(gameData["setting"])
+    print(gameData["setting"])
     
     # var declarations
     
@@ -49,10 +49,10 @@ def my_profile():
     Game = Play()
     
     # current_noeud = Node(init_state, current_player,None, old_player=current_player)
-    print("--------------------------------------------------------------")
-    print(settings)
-    # print(settings2)
-    print("--------------------------------------------------------------")
+    # print("--------------------------------------------------------------")
+    # print(gameData["setting"])
+    # # print(settings2)
+    # print("--------------------------------------------------------------")
     
     new_player, new_state = Game.human_turn(init_state, current_player,current_move)
     
@@ -77,6 +77,7 @@ def AImove():
     print("Printing data we got for ai")
     print(gameData["game"])
     print(gameData["turn"])
+    print(gameData["seti"])
     # print(gameData["move"])
     
     # var declarations
@@ -94,7 +95,7 @@ def AImove():
     # mouv2,new_player2, new_state2 , steps = Game.computer_turn(init_state2, current_noeud, current_player2)
     
     
-    mouv2,new_player2, new_state2 , steps = Game.computer_turn(init_state2, current_noeud, current_player2,settings)
+    mouv2,new_player2, new_state2 , steps = Game.computer_turn(init_state2, current_noeud, current_player2,gameData["seti"])
     
     
     #print result 
@@ -110,27 +111,51 @@ def AImove():
     return ret
 
 
-@api.route('/Settings',methods=['POST'])
+@api.route('/Computer1',methods=['POST'])
 # @cross_origin(origin='localhost',headers=['Content-Type','Authorization'])
-def my_profile4():
-    set = request.get_json()
+def AIvsAI():
+    gameData = request.get_json()
 
     # Printing data we got
-    print("Printing SETTINGS")
-    print(set)
-    # print(set["heuristic"])
-    # print(set["DEPTH"])
-    # print(set["MCTS"])
+    print("Printing data we got for ai")
+    print(gameData["game"])
+    print(gameData["turn"])
+    print(gameData["seti1"])
+    print(gameData["seti2"])
     
     # var declarations
-    settings2 = set
     
-    # ret = {
-    #     "Board" : new_state.board_game,
-    #     "turn" : new_player,
-    # }
+    init_state2 = State(gameData["game"])
+    current_player2 = gameData["turn"]
+
+    current_noeud = Node(init_state2, current_player2,None, old_player=current_player2)
     
-    return set
+    # classes
+    Game = Play()
+        
+    
+    
+    # mouv2,new_player2, new_state2 , steps = Game.computer_turn(init_state2, current_noeud, current_player2)
+    
+    if (current_player2 == 1):
+            mouv2,new_player2, new_state2 , steps = Game.computer_turn(init_state2, current_noeud, current_player2,gameData["seti1"])
+    else:
+            mouv2,new_player2, new_state2 , steps = Game.computer_turn(init_state2, current_noeud, current_player2,gameData["seti2"])
+
+    
+    
+    #print result 
+    print(new_state2.board_game)
+    
+    ret = {
+        "Board" : new_state2.board_game,
+        "turn" : new_player2,
+        "Move" : mouv2,
+        "Steps" : steps,
+    }
+
+    
+    return ret
 
 
 @api.route('/compVScomp',methods=['POST'])

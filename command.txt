@@ -1,3 +1,17 @@
+
+1- open a first terminal : 
+
+cd ./client  
+
+npm install  // si cest la premiere fois que tu lance le projet
+
+npm start
+
+
+2- open second terminal : 
+
+cd ./server
+
 .\env\Scripts\activate
 
 flask run

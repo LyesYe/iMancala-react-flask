@@ -22,7 +22,7 @@ function Choose() {
       <div id="choices">
         {/* <Choice title="AI vs AI" img={img1}/>
         <Choice title="Human vs AI" img={img2}/> */}
-        <Choice2 link="/gameAI" title="AI vs AI" img={img1} desc="In our case , we will put MinMax algorithm with basic heuristic VS the Monte Carlo heuristic"/>
+        <Choice2 link="/settingsAI" title="AI vs AI" img={img1} desc="In our case , we will put MinMax algorithm with basic heuristic VS the Monte Carlo heuristic"/>
         <Choice2 link="/settings" title="Human vs AI" img={img2} desc="You can test your skills against our Monte Carlo heuristic , can you beat it ?"/>
       </div>
 

@@ -11,6 +11,7 @@ import GameAI from './Pages/GameAI/GameAI.jsx';
 import {RemoveScrollBar} from 'react-remove-scroll-bar';
 import Choose from './Pages/Choose/Choose';
 import Settings from './Pages/Settings/Settings';
+import SettingsAI from './Pages/SettingsAI/SettingsAI';
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
         <Route  path='/' element={<Home/>} />
         <Route  path='/choice' element={<Choose/>} />
         <Route  path='/settings' element={<Settings/>} />
-        <Route  path='/settingsAI' element={<Choose/>} />
+        <Route  path='/settingsAI' element={<SettingsAI/>} />
         <Route  path='/game' element={<Game2/>} />
         <Route  path='/gameAI' element={<GameAI/>} />
         {/* <Route  path='/game' element={Game2} /> */}

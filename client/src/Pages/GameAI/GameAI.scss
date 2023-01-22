@@ -1,4 +1,4 @@
-#BigManCon{
+#BigManCon2{
     display: flex;
     flex-direction: column;
     height:100vh;
@@ -7,12 +7,13 @@
     margin: 0;
     align-items: center;
 
-    #pi{
+
+    #pi2{
         background-color: var(--primary);
         color: black;
         border: black;
     }
-    #winner1{
+    #winner12{
         position: relative;
         right: 35%;
         background-color: var(--primary);
@@ -20,13 +21,13 @@
         border-color: var(--primary);
     }
 
-    #winner{
+    #winner2{
         
         color: black;
         border: black;
     }
 
-    .headcon{
+    .headcon2{
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -36,7 +37,7 @@
         justify-content: space-around;
         
         
-        .turnu{
+        .turnu2{
             border-radius: 18px;
             display: flex;
             flex-direction: column;
@@ -59,7 +60,7 @@
         }
     }
 
-    .mancalaGrid {
+    .mancalaGrid2 {
         display: grid;
         align-items: center;
         border: solid 4px white;
@@ -76,85 +77,85 @@
         //    "store pit pit pit pit pit pit ";
     
 
-        #pit-G {
+        #pit2-G {
             grid-area: pit-1;
             
         }
         
-        #pit-H {
+        #pit2-H {
             grid-area: pit-2;
         }
         
-        #pit-I {
+        #pit2-I {
             grid-area: pit-3;
         }
         
-        #pit-J {
+        #pit2-J {
             grid-area: pit-4;
         }
         
-        #pit-K {
+        #pit2-K {
             grid-area: pit-5;
         }
         
-        #pit-L {
+        #pit2-L {
             grid-area: pit-6;
         }
         
-        #pit-A {
-            cursor:pointer;
+        #pit2-A {
+            // cursor:pointer;
             grid-area: pit-7;
             
-            &:hover {
-                background-color:var(--primary);
-                box-shadow: 6px 0 0 -2px var(--primary);
-            }
+            // &:hover {
+            //     background-color:var(--primary);
+            //     box-shadow: 6px 0 0 -2px var(--primary);
+            // }
         }
         
-        #pit-B {
-            cursor:pointer;
+        #pit2-B {
+            // cursor:pointer;
             grid-area: pit-8;
-            &:hover {
-                background-color:var(--primary);
-                box-shadow: 6px 0 0 -2px var(--primary);
-            }
+                // &:hover {
+                //     background-color:var(--primary);
+                //     box-shadow: 6px 0 0 -2px var(--primary);
+                // }
         }
         
-        #pit-C {
-            cursor:pointer;
+        #pit2-C {
+            // cursor:pointer;
             grid-area: pit-9;
-            &:hover {
-                background-color:var(--primary);
-                box-shadow: 6px 0 0 -2px var(--primary);
-            }
+            // &:hover {
+            //     background-color:var(--primary);
+            //     box-shadow: 6px 0 0 -2px var(--primary);
+            // }
         }
         
-        #pit-D {
-            cursor:pointer;
+        #pit2-D {
+            // cursor:pointer;
             grid-area: pit-10;
-            &:hover {
-                background-color:var(--primary);
-                box-shadow: 6px 0 0 -2px var(--primary);
-            }
+            // &:hover {
+            //     background-color:var(--primary);
+            //     box-shadow: 6px 0 0 -2px var(--primary);
+            // }
         }
         
-        #pit-E {
-            cursor:pointer;
+        #pit2-E {
+            // cursor:pointer;
             grid-area: pit-11;
-            &:hover {
-                background-color:var(--primary);
-                box-shadow: 6px 0 0 -2px var(--primary);
-            }
+            // &:hover {
+            //     background-color:var(--primary);
+            //     box-shadow: 6px 0 0 -2px var(--primary);
+            // }
             
         }
         
-        #pit-F {
-            cursor:pointer;
+        #pit2-F {
+            // cursor:pointer;
             grid-area: pit-12;
-            &:hover {
-                background-color:var(--primary);
-                box-shadow: 6px 0 0 -2px var(--primary);
-            }
+            // &:hover {
+            //     background-color:var(--primary);
+            //     box-shadow: 6px 0 0 -2px var(--primary);
+            // }
         }
         
         #M2 {
@@ -168,7 +169,7 @@
         }
 
 
-        .win{
+        .win2{
             background-color: var(--primary);
             display: flex;
             justify-content: center;
@@ -191,8 +192,9 @@
     
             grid-area: store;
         }
+
     
-        .mancala-store {
+        .mancala-store2 {
     
             background-color: rgb(255, 255, 255);
             display: flex;
@@ -219,11 +221,9 @@
             
             
         }
-
         
         
-        
-        .mancala-pit{
+        .mancala-pit2{
             background-color: rgb(255, 255, 255);
             display: flex;
             justify-content: center;
@@ -254,7 +254,7 @@
         }
 
 
-        .mancala-pit-{
+        .mancala-pit2-{
             background-color:var(--secondary);
             display: flex;
             justify-content: center;
@@ -285,14 +285,32 @@
         }
     
     
-    
       }
 
-   
-      .lunch{
-        background-color: white;
-        cursor: pointer;
-      }
+    .trig2{
+        color:white;
+        border: 5px solid white;
+        border-radius: 18px;
+        padding: 10px;
+        cursor:pointer;
+
+        
+    }
+    .trig2-{
+        // color:white;
+        // border: 5px solid white;
+        // border-radius: 18px;
+        // padding: 10px;
+        // cursor:pointer;
+
+        
+    }
+
+    .trig2:hover{
+        background-color:white;
+        // box-shadow: 6px 0 0 -2px white;
+        color:var(--secondary);
+    }
 
 
 

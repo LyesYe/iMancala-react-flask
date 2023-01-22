@@ -1,13 +1,14 @@
 import random
-# import tensorflow as tf
+import time
+import tensorflow as tf
 import numpy as np
 from copy import deepcopy
 from MancalaBoard import State
-# from tensorflow.keras.models import load_model
+from tensorflow.keras.models import load_model
 
-# model = load_model('./model/model.h5')
+model = load_model('./model/model.h5')
 
-MCTS_ITERATIONS = 600
+MCTS_ITERATIONS = 170
 
 
 class Node:
@@ -28,7 +29,8 @@ class Node:
         self.heuristics = {
             1: self.heuristic_1,
             2: self.heuristic_2,
-            3: self.herusitic_3,
+            3: self.heuristic_3,
+            4: self.heuristic_4,
         }
 
     def successeurs(self):
@@ -89,19 +91,28 @@ class Node:
 
     def MCTS(self, mcts_iteration=MCTS_ITERATIONS):
         gain = 0
-        for _ in range(mcts_iteration):
+        i = 0
+        while i < mcts_iteration:
             winner = self.end_game_since()
-            if winner == self.player_side:
+            if winner == 1:
                 gain += 1
+
+            i += 1
 
         FMKS = gain
         return FMKS
 
-    def herusitic_3(self):
+    def heuristic_4(self):
+        value_1 = self.heuristic_2()
+        node_value = 150 if self.old_player == self.player_side else 0
+        return node_value+value_1
+
+    def heuristic_3(self):
         moves_1 = len(self.state.possible_moves(1))
         moves_2 = len(self.state.possible_moves(-1))
 
-        return moves_1-moves_2
+        node_value = moves_1-moves_2
+        return self.heuristic_1()*1.5+self.heuristic_2()*3+node_value
 
     def heuristic_2(self):
         max_store = self.state.board_game["M1"]

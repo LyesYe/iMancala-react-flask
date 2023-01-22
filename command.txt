@@ -12,6 +12,12 @@ npm start
 
 cd ./server
 
+py -m venv env
+
 .\env\Scripts\activate
+
+pip install flask
+
+pip install python-dotenv
 
 flask run

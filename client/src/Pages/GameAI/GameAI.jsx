@@ -131,23 +131,25 @@ function GameAI() {
 
     }else {
 
-    function timeout(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
-
 
     if (turn == -1) {
       console.log("turn -1")
-      timeout(5000)
-      computerMove( game,turn,seti1 , seti2)
+      
+      // setTimeout(computerMove( game,turn,seti1 , seti2), 3000);
 
+      
+      setTimeout(() => {
+        computerMove( game,turn,seti1 , seti2)
+      }, 1000);
 
       
       
     }else if (turn == 1) {
       console.log("turn 1")
-      timeout(5000)
-      computerMove( game,turn,seti1 , seti2)
+      // setTimeout(computerMove( game,turn,seti1 , seti2), 3000);
+      setTimeout(() => {
+        computerMove( game,turn,seti1 , seti2)
+      }, 1000);
     }
 
     }

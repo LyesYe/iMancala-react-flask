@@ -135,23 +135,6 @@ function Settings() {
                 
         }
 
-        // function handleDebth(event) {
-
-        //     setSettings({ ...settings, DEPTH: event.target.checked });
-            
-        //     console.log(event.target.checked)
-        //     console.log(settings)
-                
-        // }
-
-        // function handleHeur(event) {
-
-        //     setSettings({ ...settings, heuristic: event.target.checked });
-            
-        //     console.log(event.target.checked)
-        //     console.log(settings)
-                
-        // }
 
 
         const navigate = useNavigate();
@@ -263,7 +246,7 @@ const Data = settings
                             <Select sx={{  minWidth: 120 }}
                             labelId="demo-simple-select-standard-label"
                             id="demo-simple-select-standard"
-                            value={depth}
+                            value={settings["DEPTH"]}
                             onChange={(e) => {
                                 const {
                                     target: { value },
@@ -296,7 +279,7 @@ const Data = settings
 
                     {/* <FormControl> */}
                         {/* <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel> */}
-                            <RadioGroup
+                            <RadioGroup id='heuristic'
                                 onChange={(e) => {
                                     const {
                                         target: { value },
@@ -314,6 +297,7 @@ const Data = settings
                                 <FormControlLabel value={1} control={<Radio />} label="Premiere" />
                                 <FormControlLabel value={2} control={<Radio />} label="Deuxieme" />
                                 <FormControlLabel value={3} control={<Radio />} label="Troisieme" />
+                                <FormControlLabel value={4} control={<Radio />} label="Quatrième" />
                             </RadioGroup>
                     {/* </FormControl> */}
                     

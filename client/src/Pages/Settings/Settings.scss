@@ -14,8 +14,9 @@
     //---------------------------------------------------------------------
 
     #titleSet{
-        height: 15%;
-        font-size: 4rem;
+        height: 5%;
+        font-size: 3rem;
+        padding-bottom: 3rem;
         font-weight: 600;
         color: var(--tertiary);
         margin-top: 2rem;
@@ -23,8 +24,7 @@
 
     #Settings{
 
-        
-        height: 70%;
+        height: 90%;
         width: 65%;
         display: flex;
         flex-direction: column;
@@ -35,6 +35,15 @@
         
 
         #Settings1{
+
+            #heuristic{
+                background-color: rgb(255, 255, 255);
+                border-radius: 8px;
+                color: black;
+                padding-left: 1.6rem;
+                margin-top: 1rem;
+            }
+            
             display: flex;
         flex-direction: row;
         justify-content:  center;
@@ -56,6 +65,7 @@
         .selecto{
             background-color: rgb(255, 255, 255);
             border-radius: 5PX;
+            color: black;
         }
 
 

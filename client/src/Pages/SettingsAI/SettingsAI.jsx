@@ -210,16 +210,16 @@ const Data2 = settings2
 
 
     return (
-        <div id="conSet">
+        <div id="conSet2">
           
-          <h1  id="titleSet">Choose Your Settings</h1>
+          <h1  id="titleSet2">Choose Your Settings</h1>
 
-          <div className="gridSet">
+          <div className="gridSet2">
 
           
 
-            <div id="Settings">
-                <div id="Settings1">
+            <div id="Settings2">
+                <div id="Settings12">
                     
                     <h1>ANN</h1>
                     
@@ -233,7 +233,7 @@ const Data2 = settings2
                     
                 </div>
 
-                <div id="Settings1">
+                <div id="Settings12">
                     
                     <h1>MCTS</h1>
                     
@@ -247,7 +247,7 @@ const Data2 = settings2
                     
                 </div>
 
-                <div id="Settings1">
+                <div id="Settings12">
                     
                     <h1>NegaMax</h1>
                     
@@ -257,20 +257,20 @@ const Data2 = settings2
                     
                 </div>
 
-                <div id="Settings1">
+                <div id="Settings12">
                     
                     <h1>DEPTH</h1>
 
 
                     
                     
-                    <div className="selecto">
+                    <div className="selecto2">
                     {/* <FormControl variant="standard" > */}
                         {/* <InputLabel id="demo-simple-select-standard-label">Age</InputLabel> */}
                             <Select sx={{  minWidth: 120 }}
                             labelId="demo-simple-select-standard-label"
                             id="demo-simple-select-standard"
-                            value={depth}
+                            value={settings["DEPTH"]}
                             onChange={(e) => {
                                 const {
                                     target: { value },
@@ -296,14 +296,14 @@ const Data2 = settings2
                     
                 </div>
 
-                <div id="Settings1">
+                <div id="Settings12">
                     
                     <h1>heuristic : </h1>
                     
 
                     {/* <FormControl> */}
                         {/* <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel> */}
-                            <RadioGroup
+                            <RadioGroup id='heuristic2'
                                 onChange={(e) => {
                                     const {
                                         target: { value },
@@ -321,6 +321,7 @@ const Data2 = settings2
                                 <FormControlLabel value={1} control={<Radio />} label="Premiere" />
                                 <FormControlLabel value={2} control={<Radio />} label="Deuxieme" />
                                 <FormControlLabel value={3} control={<Radio />} label="Troisieme" />
+                                <FormControlLabel value={4} control={<Radio />} label="Quatrième" />
                             </RadioGroup>
                     {/* </FormControl> */}
                     
@@ -332,8 +333,8 @@ const Data2 = settings2
 
 
 
-            <div id="Settings">
-                <div id="Settings1">
+            <div id="Settings2">
+                <div id="Settings12">
                     
                     <h1>ANN</h1>
                     
@@ -347,7 +348,7 @@ const Data2 = settings2
                     
                 </div>
 
-                <div id="Settings1">
+                <div id="Settings12">
                     
                     <h1>MCTS</h1>
                     
@@ -361,7 +362,7 @@ const Data2 = settings2
                     
                 </div>
 
-                <div id="Settings1">
+                <div id="Settings12">
                     
                     <h1>NegaMax</h1>
                     
@@ -371,20 +372,20 @@ const Data2 = settings2
                     
                 </div>
 
-                <div id="Settings1">
+                <div id="Settings12">
                     
                     <h1>DEPTH</h1>
 
 
                     
                     
-                    <div className="selecto">
+                    <div className="selecto2">
                     {/* <FormControl variant="standard" > */}
                         {/* <InputLabel id="demo-simple-select-standard-label">Age</InputLabel> */}
                             <Select sx={{  minWidth: 120 }}
                             labelId="demo-simple-select-standard-label"
                             id="demo-simple-select-standard"
-                            value={depth}
+                            value={settings["DEPTH"]}
                             onChange={(e) => {
                                 const {
                                     target: { value },
@@ -410,14 +411,14 @@ const Data2 = settings2
                     
                 </div>
 
-                <div id="Settings1">
+                <div id="Settings12">
                     
                     <h1>heuristic : </h1>
                     
 
                     {/* <FormControl> */}
                         {/* <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel> */}
-                            <RadioGroup
+                            <RadioGroup id='heuristic2'
                                 onChange={(e) => {
                                     const {
                                         target: { value },
@@ -435,6 +436,7 @@ const Data2 = settings2
                                 <FormControlLabel value={1} control={<Radio />} label="Premiere" />
                                 <FormControlLabel value={2} control={<Radio />} label="Deuxieme" />
                                 <FormControlLabel value={3} control={<Radio />} label="Troisieme" />
+                                <FormControlLabel value={4} control={<Radio />} label="Quatrième" />
                             </RadioGroup>
                     {/* </FormControl> */}
                     
@@ -450,7 +452,7 @@ const Data2 = settings2
           <div onClick={() => { nav("/gameAI", { state:{
             settings: settings,
             settings2: settings2,
-          }});}} id="start">
+          }});}} id="start2">
                     
                     <h1 >Start</h1>
 

@@ -104,7 +104,7 @@ class Node:
 
     def heuristic_4(self):
         value_1 = self.heuristic_2()
-        node_value = 150 if self.old_player == self.player_side else 0
+        node_value = 150 if self.old_player == 1 else 0
         return node_value+value_1
     
 

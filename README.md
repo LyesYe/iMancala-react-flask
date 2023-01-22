@@ -6,16 +6,19 @@ Executer les commandes Suivantes :
 
 ## 1st Terminal
 
+```js
 cd ./client  
 
 npm install  
 
 npm start
 
+```
 
 
 ## 2nd Terminal
  
+```py 
 cd ./server
 
 py -m venv env
@@ -29,6 +32,8 @@ pip install python-dotenv
 pip install tensorflow
 
 flask run
+
+```
 
 
 

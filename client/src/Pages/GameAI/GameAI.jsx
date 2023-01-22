@@ -297,6 +297,17 @@ function GameAI() {
   }
 
 
+  function polo (pit) {
+
+    if (pit == "A" || pit == "B" || pit == "C" || pit == "D" || pit == "E" || pit == "F" ) {
+      return 1;
+    }
+    else {
+      return -1;
+    }
+  }
+
+
 
 
   return (
@@ -338,9 +349,9 @@ function GameAI() {
               <div className={winner==1 ? "win2" : "mancala-store2"} id={`${pit}`} key={pit} >{pit} : {game[pit]}</div>
             :
             (pit === "M2")  ?
-              <div className={winner==-1 ? "win2" : "mancala-store2"} id={`${pit}`} key={pit} >{pit} : {game[pit]}</div>
+              <div className={winner==-1 ? "win22" : "mancala-store2"} id={`${pit}`} key={pit} >{pit} : {game[pit]}</div>
             :
-              <div className={move == pit ? "mancala-pit2-" :"mancala-pit2"} id={`pit2-${pit}`} key={pit}  >
+              <div className={move == pit && polo(pit) ==1  ? "mancala-pit2-1" : move == pit && polo(pit) ==-1 ? "mancala-pit2-2"  : "mancala-pit2"} id={`pit2-${pit}`} key={pit}  >
                 {pit} : {game[pit]}
                 </div>
             

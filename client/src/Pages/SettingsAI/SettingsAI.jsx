@@ -210,9 +210,25 @@ const Data2 = settings2
 
 
     return (
+
+      
         <div id="conSet2">
           
-          <h1  id="titleSet2">Choose Your Settings</h1>
+          
+
+
+          <div className="bigo">
+            <div id="to">
+              AI 1
+            </div>
+
+            <h1  id="titleSet2">Choose Your Settings</h1>
+
+            <div id="to">
+              AI 2
+            </div>
+
+          </div>
 
           <div className="gridSet2">
 
@@ -287,8 +303,8 @@ const Data2 = settings2
 
 
                             >
-                                <MenuItem value={6}>6</MenuItem>
-                                <MenuItem value={12}>12</MenuItem>
+                                <MenuItem value={5}>5</MenuItem>
+                                <MenuItem value={10}>10</MenuItem>
                                 <MenuItem value={20}>20</MenuItem>
                             </Select>
                     {/* </FormControl> */}
@@ -385,7 +401,7 @@ const Data2 = settings2
                             <Select sx={{  minWidth: 120 }}
                             labelId="demo-simple-select-standard-label"
                             id="demo-simple-select-standard"
-                            value={settings["DEPTH"]}
+                            value={settings2["DEPTH"]}
                             onChange={(e) => {
                                 const {
                                     target: { value },
@@ -394,7 +410,7 @@ const Data2 = settings2
                                 setSettings2({ ...settings2, DEPTH: value });
                     
                                 console.log(value)
-                                console.log(settings)
+                                console.log(settings2)
                             }}
                             label="Age"
 
@@ -402,8 +418,8 @@ const Data2 = settings2
 
 
                             >
-                                <MenuItem value={6}>6</MenuItem>
-                                <MenuItem value={12}>12</MenuItem>
+                                <MenuItem value={5}>5</MenuItem>
+                                <MenuItem value={10}>10</MenuItem>
                                 <MenuItem value={20}>20</MenuItem>
                             </Select>
                     {/* </FormControl> */}
@@ -427,7 +443,7 @@ const Data2 = settings2
                                     setSettings2({ ...settings2, heuristic: parseInt(value) });
                         
                                     console.log(value)
-                                    console.log(settings)
+                                    console.log(settings2)
                                 }}
                                 aria-labelledby="demo-radio-buttons-group-label"
                                 defaultValue="female"

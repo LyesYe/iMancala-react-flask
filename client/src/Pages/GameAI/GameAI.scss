@@ -168,6 +168,30 @@
             
         }
 
+        .win22{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:100px; height:224px;
+            color: white;
+            margin:5px;
+            border-radius:18px;
+            box-shadow: 6px 0 0 -2px rgb(255, 255, 255);
+            // background-color:white;
+            border: solid rgb(255, 255, 255);
+            
+            p{
+                position:absolute;
+                top:50%;
+                width:100%;
+                transform:translate(0, -50%);
+                text-align:center;
+            }
+    
+            grid-area: store;
+        }
+
 
         .win2{
             background-color: var(--primary);
@@ -254,7 +278,38 @@
         }
 
 
-        .mancala-pit2-{
+        .mancala-pit2-1{
+            background-color: var(--primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:100px; height:100px;
+            color: rgb(0, 0, 0);
+            margin:5px;
+            border-radius:100%;
+            // background-color:white;
+            box-shadow: 6px 0 0 -2px var(--primary);
+            border: solid rgb(0, 0, 0);
+            transition: 0.3s;
+            
+            grid-area: pit;
+    
+            
+            p{
+                position:absolute;
+                top:50%;
+                width:100%;
+                transform:translate(0, -50%);
+                text-align:center;
+            }
+    
+            
+            
+            
+        }
+
+
+        .mancala-pit2-2{
             background-color:var(--secondary);
             display: flex;
             justify-content: center;
@@ -283,6 +338,8 @@
             
             
         }
+
+
     
     
       }

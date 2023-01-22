@@ -3,6 +3,43 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    // justify-content: flex-end;
+
+    .bigo{
+        width: 100vw;
+        display: flex;
+        // align-items: flex-start;
+        // justify-content: center;
+        justify-content: space-evenly;
+        
+        #to{
+            color: antiquewhite;
+            display: flex;
+            align-items: center;
+
+            border-color: white;
+            border-style: solid;
+            border-width: 5px 5px 0px 5px;
+            border-radius: 12px 12px 0px 0px;
+            // padding: 1.5rem , 1.5rem , 0.5rem , 1.5rem;
+            padding: 1.5rem;
+            font-size: 2rem;
+            font-weight: 600;
+            
+            
+        }
+
+        #titleSet2{
+            // height: 4%;
+            font-size: 3rem;
+            padding-bottom: 1rem;
+            font-weight: 600;
+            color: var(--tertiary);
+            margin-top: 1rem;
+        }
+    }
+
+    
 
     //take full width
     //---------------------------------------------------------------------
@@ -13,14 +50,7 @@
     // left:0px;
     //---------------------------------------------------------------------
 
-    #titleSet2{
-        height: 4%;
-        font-size: 3rem;
-        padding-bottom: 3rem;
-        font-weight: 600;
-        color: var(--tertiary);
-        margin-top: 2rem;
-    }
+    
 
 
     .gridSet2{
@@ -40,6 +70,7 @@
 
         #Settings2{
 
+            
             padding: 1.5rem;
             height: 70%;
             width: 65%;
@@ -51,6 +82,7 @@
             
     
             #Settings12{
+                
 
                 #heuristic2{
                     background-color: rgb(255, 255, 255);

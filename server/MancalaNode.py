@@ -106,6 +106,7 @@ class Node:
         value_1 = self.heuristic_2()
         node_value = 150 if self.old_player == self.player_side else 0
         return node_value+value_1
+    
 
     def heuristic_3(self):
         moves_1 = len(self.state.possible_moves(1))

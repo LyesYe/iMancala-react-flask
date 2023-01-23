@@ -263,8 +263,8 @@ const Data = settings
 
 
                             >
-                                <MenuItem value={6}>6</MenuItem>
-                                <MenuItem value={12}>12</MenuItem>
+                                <MenuItem value={5}>5</MenuItem>
+                                <MenuItem value={10}>10</MenuItem>
                                 <MenuItem value={20}>20</MenuItem>
                             </Select>
                     {/* </FormControl> */}

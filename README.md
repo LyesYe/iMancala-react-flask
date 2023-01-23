@@ -21,7 +21,7 @@ npm start
 ```py 
 cd ./server
 
-py -m venv env
+python -m venv env
 
 .\env\Scripts\activate
 

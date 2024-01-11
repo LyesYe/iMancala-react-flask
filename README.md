@@ -4,9 +4,9 @@
 Welcome to the Mancala Web Game! This project brings the classic Mancala board game to your web browser, offering an immersive 1 vs 1 mode and a challenging 1 vs AI mode.
 
 # Features
-## **Two Modes:** Engage in a thrilling head-to-head battle with a friend or challenge yourself against a sophisticated AI opponent.
+* **Two Modes:** Engage in a thrilling head-to-head battle with a friend or challenge yourself against a sophisticated AI opponent.
 Intuitive Gameplay: Experience the simplicity of Mancala with a user-friendly interface, making it easy for players of all levels to jump in and enjoy.
-## **AI Heuristics:** The AI opponent uses advanced heuristics to provide a dynamic and strategic gaming experience. It's not just a game; it's a mental workout!
+* **AI Heuristics:** The AI opponent uses advanced heuristics to provide a dynamic and strategic gaming experience. It's not just a game; it's a mental workout!
 Responsive Design: Play seamlessly across devices, from desktops to tablets and smartphones.
 
 

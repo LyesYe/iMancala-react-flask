@@ -58,10 +58,10 @@ flask run
 
 
 # Heuristics
- - 1 : Magasin joueur 1 - Magasin joueur 2
- - 2 : Magasin joueur 1 + somme de ses pits - Magasin joueur 2 + sommes de ses pits
- - 3 : Heuristic 1 * poids + heurtitic 2 * poids + nombre_mouvement possible joueur 1 - joueur 2 
- - 4 : Heuristic 2 + poids si on joueur 1 rejoue une deuxiÃ¨me fois
+**- 1 :** Player_1_Store - Player_2_Store
+**- 2 :** Player_1_Store + sum of its pits - Player_2_Store + sum of its pits
+**- 3 :** Heuristic 1 * weight + Heuristic 2 * weight + number of possible moves for Player 1 - for Player 2
+**- 4 :** Heuristic 2 + weight (if Player 1 gets a second turn)
 
 
 

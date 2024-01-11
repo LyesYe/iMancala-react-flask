@@ -68,26 +68,21 @@ flask run
 
 # Results 
 
-## heuristic 1 vs heuristic 2 
-- DEPTH 10 - EGALITE 
-- DEPTH 5 - 2 WON
-
-## heuristic 1 vs heuristic 3
-- DEPTH 10 - EGALITE 
-- DEPTH 5 -  3 WON 
-
-## heuristic 2 vs heuristic 3
-- DEPTH 10 - EGALITE 
-- DEPTH 5 -  EGALITE
-
-## heuristic 2 vs  MCTS(2)
-- DEPTH 10 - 2 WON
-- DEPTH 5 - 2 WON (DRAW + WON)
-
-## heuristic 2 vs  ANN
-- DEPTH 10  - 2 WON
-- DEPTH 5 - EGALITE
-
-## heuristic 2 vs heuristic 4 
-- DEPTH 10 - 4 won
-- DEPTH 5 -  2 won 
+## Heuristic 1 vs Heuristic 2:
+- Depth 10: Draw
+- Depth 5: Heuristic 2 Wins
+## Heuristic 1 vs Heuristic 3:
+- Depth 10: Draw
+- Depth 5: Heuristic 3 Wins
+## Heuristic 2 vs Heuristic 3:
+- Depth 10: Draw
+- Depth 5: Draw
+## Heuristic 2 vs MCTS(2):
+- Depth 10: Heuristic 2 Wins
+- Depth 5: Heuristic 2 Wins (Draw + Win)
+## Heuristic 2 vs ANN:
+- Depth 10: Heuristic 2 Wins
+- Depth 5: Draw
+## Heuristic 2 vs Heuristic 4:
+- Depth 10: Heuristic 4 Wins
+- Depth 5: Heuristic 2 Wins
